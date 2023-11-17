@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => { // request, se crea la api
     }
     if(respuesta=='si'){
       //res.end(fs.writeFileSync('texto2.txt', 'Hola su nombre es: '+nombre+' su edad es: '+edad));
-      res.end(fs.appendFileSync('texto2.txt', 'Hola su nombre es: '+nombre+' su edad es: '+edad+'\n'));
+      fs.appendFileSync('texto2.txt', `Hola su nombre es: ${nombre} su edad es: ${edad}\n`);
     }
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
