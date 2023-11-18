@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => { // request, se crea la api
       res.end(JSON.stringify(usuario))
     }
     else{
-      res.end("El usuario digitado no existe")
+      res.end("El usuario digitado no existe ")
     }
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
